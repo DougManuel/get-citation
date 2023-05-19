@@ -1,0 +1,13 @@
+databases:
+  - name: "database-name"
+    code: "dbn"
+    queries:
+      - index: 1a
+        query: "first query"
+      - index: 1b
+        query: "second query"
+      - index: 1c
+        query: "third query"
+      - index: 2
+        combine_queries: TRUE
+        query: "(#1a OR #1b OR #1c)"

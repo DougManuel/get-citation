@@ -1,0 +1,87 @@
+metadata:
+  project_name: "PHES-EF"
+  authors: ["Author1", "Author2"]
+  version: "1.0"
+  date: "2023-05-18"
+
+databases:
+  - name: "Ovid"
+    code: "ovid"
+    queries:
+      - index: 1
+        query: "Population Surveillance/ and health.ti,ab,kw."
+      - index: 2
+        query: "Public Health Surveillance/ or Sentinel Surveillance/ or Biosurveillance/"
+      - index: 3
+        query: "Population surveillance.ti,ab,kw."
+      - index: 4
+        query: "Public health surveillance.ti,ab,kw."
+      - index: 5
+        query: "Sentinel surveillance.ti,ab,kw."
+      - index: 6
+        query: "syndromic surveillance.ti,ab,kw."
+      - index: 7
+        query: "biosurveillance?.ti,ab,kw."
+      - index: 8
+        query: "exp Epidemiological Monitoring/"
+      - index: 9
+        query: "(epidemiologic* adj (monitor* or surveillance?)).ti,ab,kw."
+      - index: 10
+        query: "((wastewater or waste water or sewage) adj3 (monitoring? or surveillance?)).ti,ab,kw."
+      - index: 11
+        query: "((wastewater or waste water or sewage) adj3 epidemiology).ti,ab,kw."
+      - index: 12
+        query: "or/1-11"
+      - index: 13
+        query: "Wastewater/"
+      - index: 14
+        query: "Public health/"
+      - index: 15
+        query: "One Health/ or World Health/ or Global Health/"
+      - index: 16
+        query: "(One health or onehealth).ti,ab,kw."
+      - index: 17
+        query: "Population Health/"
+      - index: 18
+        query: "Surveillance.ti,ab,kw."
+      - index: 19
+        query: "(13 or 14 or 15 or 16 or 17) and 18"
+      - index: 20
+        query: "12 or 19"
+      - index: 21
+        query: "\"Evaluation Studies as Topic\"/"
+      - index: 22
+        query: "Evaluation Study/"
+      - index: 23
+        query: "evaluat*.ti,kw."
+      - index: 24
+        query: "assess*.ti,kw."
+      - index: 25
+        query: "((evaluat* or assess*) adj5 (frame work? or framework? or guide line? or guideline?)).ab."
+      - index: 26
+        query: "or/21-25"
+      - index: 27
+        query: "20 and 26"
+
+  - name: "PubMed"
+    code: "pubmed"
+    queries:
+      - index: 1
+        query: "Epidemiological Monitoring[Mesh]"
+      - index: 2
+        query: "epidemiologic monitoring[tiab]"
+      - index: 2a
+        query: "epidemiological monitor[tiab]"
+      - index: 2b
+        query: "epidemiological monitoring[tiab]"
+      - index: 2c
+        query: "epidemiologic surveillance[tiab]"
+      - index: 2d
+        query: "epidemiological surveillance[tiab]"
+      - index: 2e
+        combine_queries: TRUE
+        query: "(#2a OR #2b OR #2c OR #2d)"
+      - index: 3
+        query: "epidemiologic monitoring[tiab] OR epidemiological monitor[tiab] OR epidemiological monitoring[tiab] OR epidemiologic surveillance[tiab] OR epidemiological surveillance[tiab]"
+
+
