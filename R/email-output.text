@@ -1,0 +1,182 @@
+Link:
+Click to run search
+The above Jumpstart will only work for users who have access to this specific database.
+
+
+Database:
+Ovid MEDLINE(R) ALL <1946 to May 10, 2023>
+
+
+#
+Query
+Results from 11 May 2023
+Notes
+
+CONCEPT 1: Public health surveillance
+
+This section includes MeSH that focus on surveillance.
+1
+Population Surveillance/ and health.ti,ab,kw.
+21,747
+
+2
+Public Health Surveillance/ or Sentinel Surveillance/ or Biosurveillance/
+12,191
+
+3
+Population surveillance.ti,ab,kw.
+727
+
+4
+Public health surveillance.ti,ab,kw.
+3,140
+
+5
+Sentinel surveillance.ti,ab,kw.
+1,862
+
+6
+syndromic surveillance.ti,ab,kw.
+1,203
+
+7
+biosurveillance?.ti,ab,kw.
+383
+
+8
+exp Epidemiological Monitoring/
+8,710
+
+9
+(epidemiologic* adj (monitor* or surveillance?)).ti,ab,kw.
+5,812
+
+10
+((wastewater or waste water or sewage) adj3 (monitoring? or surveillance?)).ti,ab,kw.
+1,140
+
+11
+((wastewater or waste water or sewage) adj3 epidemiology).ti,ab,kw.
+807
+
+12
+or/1-11
+52,111
+
+
+CONCEPT 1A: Domains of interest
+
+I think it’s reasonable to this that there may be articles in the following domains about surveillance, that don’t have one of the MeSH above.
+13
+Wastewater/
+29,951
+
+14
+Public health/
+94,766
+
+15
+One Health/ or World Health/ or Global Health/
+55,949
+
+16
+(One health or onehealth).ti,ab,kw.
+7,431
+
+17
+Population Health/
+1,828
+
+
+CONCEPT 1B: Surveillance
+
+Only want domain specific articles if they mention surveillance.
+18
+Surveillance.ti,ab,kw.
+230,170
+
+19
+(13 or 14 or 15 or 16 or 17) and 18
+7,596
+Concept 1A + 1B together
+20
+12 or 19
+56,897
+All Concept 1 results
+
+COCNEPT 1: Evaluation
+
+
+21
+"Evaluation Studies as Topic"/
+122,472
+
+22
+Evaluation Study/
+261,881
+
+23
+evaluat*.ti,kw.
+658,891
+Searching only in Title and Keywords to target results where studies are about evaluation
+24
+assess*.ti,kw.
+474,778
+Same as above, but with assessment/assessed
+25
+((evaluat* or assess*) adj5 (frame work? or framework? or guide line? or guideline?)).ab.
+42,083
+Searching only in abstract for evaluation or assessment if they appear near framework/guideline.
+26
+or/21-25
+1,437,720
+Concept 2 results
+27
+20 and 26
+4,502
+Final results
+28
+"Updated guidelines for evaluating public health surveillance systems: recommendations from the Guidelines Working Group".ti.
+1
+29
+"Public Health Surveillance Systems: Recent Advances in Their Use and Evaluation".ti.
+1
+30
+"Surveillance systems evaluation: a systematic review of the existing approaches".ti.
+1
+31
+"Framework for evaluating public health surveillance systems for early detection of outbreaks: recommendations from the CDC Working Group".ti.
+1
+32
+27 and (28 or 29 or 30 or 31)
+4
+All 4 seed articles in final results
+
+
+Population Surveillance/ and health.ti,ab,kw.
+Public Health Surveillance/ or Sentinel Surveillance/ or Biosurveillance/
+Population surveillance.ti,ab,kw.
+Public health surveillance.ti,ab,kw.
+Sentinel surveillance.ti,ab,kw.
+syndromic surveillance.ti,ab,kw.
+biosurveillance?.ti,ab,kw.
+exp Epidemiological Monitoring/
+(epidemiologic* adj (monitor* or surveillance?)).ti,ab,kw.
+((wastewater or waste water or sewage) adj3 (monitoring? or surveillance?)).ti,ab,kw.
+((wastewater or waste water or sewage) adj3 epidemiology).ti,ab,kw.
+or/1-11
+Wastewater/
+Public health/
+One Health/ or World Health/ or Global Health/
+(One health or onehealth).ti,ab,kw.
+Population Health/
+Surveillance.ti,ab,kw.
+(13 or 14 or 15 or 16 or 17) and 18
+12 or 19
+"Evaluation Studies as Topic"/
+Evaluation Study/
+evaluat*.ti,kw.
+assess*.ti,kw.
+((evaluat* or assess*) adj5 (frame work? or framework? or guide line? or guideline?)).ab.
+or/21-25
+20 and 26
