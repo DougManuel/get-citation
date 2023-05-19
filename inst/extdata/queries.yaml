@@ -67,21 +67,67 @@ databases:
     code: "pubmed"
     queries:
       - index: 1
-        query: "Epidemiological Monitoring[Mesh]"
+        query: "Population Surveillance[Mesh] AND health[tiab]"
       - index: 2
-        query: "epidemiologic monitoring[tiab]"
-      - index: 2a
-        query: "epidemiological monitor[tiab]"
-      - index: 2b
-        query: "epidemiological monitoring[tiab]"
-      - index: 2c
-        query: "epidemiologic surveillance[tiab]"
-      - index: 2d
-        query: "epidemiological surveillance[tiab]"
-      - index: 2e
-        combine_queries: TRUE
-        query: "(#2a OR #2b OR #2c OR #2d)"
+        query: "(Public Health Surveillance[Mesh] OR Sentinel Surveillance[Mesh] OR Biosurveillance[Mesh])"
       - index: 3
-        query: "epidemiologic monitoring[tiab] OR epidemiological monitor[tiab] OR epidemiological monitoring[tiab] OR epidemiologic surveillance[tiab] OR epidemiological surveillance[tiab]"
-
-
+        query: "Population surveillance[tiab]"
+      - index: 4
+        query: "Public health surveillance[tiab]"
+      - index: 5
+        query: "Sentinel surveillance[tiab]"
+      - index: 6
+        query: "syndromic surveillance[tiab]"
+      - index: 7
+        query: "biosurveillance[tiab]"
+      - index: 8
+        query: "Epidemiological Monitoring[Mesh]"
+      - index: 9a
+        query: "epidemiologic monitoring[tiab]"
+      - index: 9b
+        query: "epidemiological monitor[tiab]"
+      - index: 9c
+        query: "epidemiological monitoring[tiab]"
+      - index: 9d
+        query: "epidemiologic surveillance[tiab]"
+      - index: 9e
+        query: "epidemiological surveillance[tiab]"
+      - index: 9f
+        combine_queries: TRUE
+        query: "(#9a OR #9b OR #9c OR #9d OR #9e)"
+      - index: 10
+        query: "((wastewater OR \"waste water\" OR sewage) AND (monitoring OR surveillance))[tiab]"
+      - index: 11
+        query: "((wastewater OR \"waste water\" OR sewage) AND epidemiology)[tiab]"
+      - index: 12
+        query: "(#1 OR #2 OR #3 OR #4 OR #5 OR #6 OR #7 OR #8 OR #9g OR #10 OR #11)"
+      - index: 13
+        query: "Wastewater[Mesh]"
+      - index: 14
+        query: "Public health[Mesh]"
+      - index: 15
+        query: "(One Health[Mesh] OR World Health[Mesh] OR Global Health[Mesh])"
+      - index: 16
+        query: "(One health OR onehealth)[tiab]"
+      - index: 17
+        query: "Population Health[Mesh]"
+      - index: 18
+        query: "Surveillance[tiab]"
+      - index: 19
+        query: "(#13 OR #14 OR #15 OR #16 OR #17) AND #18"
+      - index: 20
+        query: "#12 OR #19"
+      - index: 21
+        query: "\"Evaluation Studies as Topic\"[Mesh]"
+      - index: 22
+        query: "Evaluation Study[Publication Type]"
+      - index: 23
+        query: "evaluat*[tiab]"
+      - index: 24
+        query: "assess*[tiab]"
+      - index: 25
+        query: "((evaluat* OR assess*) AND (\"frame work\" OR framework OR \"guide line\" OR guideline))[tiab]"
+      - index: 26
+        query: "(#21 OR #22 OR #23 OR #24 OR #25)"
+      - index: 27
+        query: "#20 AND #26"

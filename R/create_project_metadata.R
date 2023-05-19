@@ -3,7 +3,7 @@ library(yaml)
 library(stringr)
 
 # Load the YAML file
-yaml_file_path <- file.path("inst", "extdata", "metadata.yaml")
+yaml_file_path <- file.path("inst", "extdata", "queries.yaml")
 yaml_content <- yaml.load_file(yaml_file_path)
 
 # Extract the databases
@@ -83,12 +83,13 @@ print_query_results <- function(queries) {
   }
 
   # Print the summary table
-  print(results_summary)
+  print(results_summary, row.names = FALSE)
 }
 
-# Prepare the queries for the database
-dbn_queries <- prepare_database_queries(databases[[1]])
-
-# Print the query results
-print_query_results(dbn_queries)
-
+# Prepare the queries for each database
+for (database in databases) {
+  dbn_queries <- prepare_database_queries(database)
+  cat("Database Code: ", database$code, "\n")
+  print_query_results(dbn_queries)
+  cat("\n")
+}
