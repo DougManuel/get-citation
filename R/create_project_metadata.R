@@ -3,7 +3,7 @@ library(yaml)
 library(stringr)
 
 # Load the YAML file
-yaml_file_path <- file.path("inst", "extdata", "metadata.yaml")
+yaml_file_path <- file.path("inst", "extdata", "queries.yaml")
 yaml_content <- yaml.load_file(yaml_file_path)
 
 # Extract the databases
