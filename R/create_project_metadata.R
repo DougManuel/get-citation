@@ -3,11 +3,22 @@ library(yaml)
 library(stringr)
 
 # Load the YAML file
-yaml_file_path <- file.path("inst", "extdata", "queries.yaml")
+yaml_file_path <- file.path("inst", "extdata", "metadata.yaml")
 yaml_content <- yaml.load_file(yaml_file_path)
 
 # Extract the databases
 databases <- yaml_content$databases
+
+# Define the list of databases to run
+databases_to_run <- c("pubmed")
+
+# Prepare the queries for the specified databases
+for (database in databases) {
+  if (database$code %in% databases_to_run) {
+    dbn_queries <- prepare_database_queries(database)
+    print_query_results(dbn_queries, database$code)
+  }
+}
 
 # Function to replace index references in a string
 replace_index_references <- function(query_string, queries) {
